@@ -1,0 +1,18 @@
+{
+  "name": "zhihu_editor_dump",
+  "version": "0.0.1",
+  "description": "从知乎iOS客户端里面扒出来的",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "node server"
+  },
+  "keywords": [
+    "知乎",
+    "编辑器",
+    "iOS",
+    "Hybrid"
+  ],
+  "author": "daubert",
+  "license": "MIT"
+}
