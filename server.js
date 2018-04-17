@@ -6,7 +6,9 @@ const port = process.argv[2] || 8888
 
 http.createServer((request, response) => {
     const uri = url.parse(request.url).pathname
-    const fileName = path.join(process.cwd(), uri, '/index.html')
+    let fileName = path.join(process.cwd(), uri)
+    if (fs.statSync(fileName).isDirectory())
+        fileName += '/index.html'
     fs.readFile(fileName, "binary", (err, file) => {
         if(err) {
             response.writeHead(500, {"Content-Type": "text/plain"})
